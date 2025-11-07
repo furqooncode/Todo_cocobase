@@ -213,6 +213,7 @@ input[type="checkbox"]:checked::after {
   font-weight: 600;
   color: #fff;
   transition: 0.25s;
+  width: 70px;
 }
 
 .delete-btn:hover {
