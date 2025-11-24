@@ -1,8 +1,7 @@
 import { Cocobase } from "https://unpkg.com/cocobase@1.1.4/dist/index.js";
 
 const db = new Cocobase({
-  apiKey: "uGSgOV6ks-dx1w7xctGuxF5g59zOvyhVqmapuYZy",
-  projectId: "03f3d4d2-e422-46ed-8b0c-9c5cdb2cbb55",
+  
 });
 
 const form = document.getElementById("todo-form");
@@ -46,6 +45,7 @@ function createItem(todo) {
   delBtn.className = "delete-btn";
 
   delBtn.addEventListener("click", async () => {
+    delBtn.textContent = "deleting..."
     await db.deleteDocument("todos", todo.id);
     fetchTodos();
   });
